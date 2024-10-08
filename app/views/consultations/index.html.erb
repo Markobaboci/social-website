@@ -1,0 +1,29 @@
+<h1>Consultations</h1>
+<div class="outer-container" style="background-image: url('<%= asset_path("background_white.jpg") %>'); background-size: cover; background-position: center; padding: 80px 150;">
+  <div class="inner-container" style="background-image: url('<%= asset_path("background_green.jpg") %>'); background-size: cover; background-position: center; width: 85%; height: auto; margin: 0 auto; padding: 20px;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <% @consultations.each do |consultation|%>
+          <div class="col-md-4 d-flex mb-4">
+            <div class="card" style="background-image: url('<%= asset_path("background_white.jpg") %>'); background-size: cover; background-position: center;">
+              <div class="meta">
+                <div><%= image_tag "cubes.jpg", class: "img-thumbnail"%></div>
+              </div>
+              <div class="card-body">
+                <h4 class="card-title"> <%= consultation.name %></h1>
+                <h6 class="card-subtitle mb-2 text-muted">Location:<%= consultation.address %></h2>
+                <p>Tel: <%= consultation.kontakt %></p>
+                <p>Email: example-email@gmail.com </p>
+                <p>Website: www.this-is-example.com </p>
+                <p>Opening Hours:<%= consultation.opening_hours %></p>
+                <p class="read-more">
+                  <a href="#">Read More</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>
