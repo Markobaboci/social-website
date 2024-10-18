@@ -1,10 +1,14 @@
-<h1>Consultations</h1>
+
 <div class="outer-container" style="background-image: url('<%= asset_path("background_white.jpg") %>'); background-size: cover; background-position: center; padding: 80px 150;">
   <div class="inner-container" style="background-image: url('<%= asset_path("background_green.jpg") %>'); background-size: cover; background-position: center; width: 85%; height: auto; margin: 0 auto; padding: 20px;">
+    <div class="flex">
+      <h1>Beratungsstellen:</h1>
+    </div>
     <div class="container">
       <div class="row justify-content-center">
         <% @consultations.each do |consultation|%>
           <div class="col-md-4 d-flex mb-4">
+            <a href="#" class="card-link" style="text-decoration: none;">
             <div class="card" style="background-image: url('<%= asset_path("background_white.jpg") %>'); background-size: cover; background-position: center;">
               <div class="meta">
                 <div><%= image_tag "cubes.jpg", class: "img-thumbnail"%></div>
